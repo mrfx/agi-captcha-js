@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>agi-captcha demo</title>
+</head>
+<body>
+
+  <form style="width:500px;margin-right: auto;margin-left: auto;padding:25px;border:1px solid black;">
+    <fieldset>
+      <div id="cp">
+        some sample text<br>
+
+      </div>
+    </fieldset>
+  </form>
+
+  <script src="./../dist/captcha.js"></script>
+  <script>
+
+    window.onload = function () {
+      const c = new agiCaptcha();
+      c.params.color = '#33ff88';
+      c.createCanvas();
+
+      setTimeout( ()=> {
+        c.params.color = '#ff8080';
+        c.createCanvas();
+      }, 2000);
+
+    };
+
+
+
+
+  </script>
+
+</body>
+</html>
