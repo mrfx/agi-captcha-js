@@ -11,5 +11,5 @@ There is also additional hash added to text. The same hash should be added to te
 
 See ./demo/backend.php
 
-For more efficiency you can also generate hashes dynamically at server. 
+For more efficiency you can also generate hash dynamically at server, then load it as parameter of captcha.js. 
 It can be done using several methods, for example by XMLHttpRequest, etc.
