@@ -1,0 +1,3 @@
+agi-captcha author: Grzegorz Wojak
+https://www.aginternet.pl
+@license MIT
