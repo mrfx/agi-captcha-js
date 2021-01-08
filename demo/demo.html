@@ -8,10 +8,13 @@
 
   <form style="width:500px;margin-right: auto;margin-left: auto;padding:25px;border:1px solid black;">
     <fieldset>
-      <div id="cp">
-        some sample text<br>
-
-      </div>
+      <div id="canvas-container"></div>
+      <input type="text" name="captcha-text-from-user"
+             placeholder="enter the code shown above"
+             style="width: 100%;margin-top: 5px; padding: 10px; box-sizing: border-box;;">
+    </fieldset>
+    <fieldset>
+      <button type="submit">submit</button>
     </fieldset>
   </form>
 
@@ -20,6 +23,8 @@
 
     window.onload = function () {
       const c = new agiCaptcha();
+      c.params.parentDivId = 'canvas-container';
+      c.params.canvasID = 'canvas-captcha';
       c.params.color = '#33ff88';
       c.params.textPosition = [20, 35];
       c.createCanvas();

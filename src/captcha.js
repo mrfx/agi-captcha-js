@@ -8,15 +8,16 @@ module.exports =  class agiCaptcha {
 
     // DEFAULT PARAMETERS
     this.params = {
+      hash: 'k5G0cx321dfk',
       backgroundColor: '#000000',
       color: '#e8e8e8',
       width: 'auto',
       canvasID: 'agi-captcha-canvas',
       hiddenId: 'agi-captcha-hidden',
-      parentDivId: 'cp',
       hiddenInputName: 'password-captcha',
       font: '32px Arial',
-      textPosition: [10, 35]
+      textPosition: [10, 35],
+      parentDivId: 'cp'
     }
 
   }
@@ -48,7 +49,7 @@ module.exports =  class agiCaptcha {
     hiddenElement.setAttribute('id', this.params.hiddenId )
     hiddenElement.setAttribute('type', 'hidden');
     hiddenElement.setAttribute('name', this.params.hiddenInputName);
-    hiddenElement.setAttribute('value', md5(text));
+    hiddenElement.setAttribute('value', md5(text + this.params.hash));
 
     try {
 
