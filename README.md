@@ -1,6 +1,6 @@
 agiCaptcha.
 
-Generates random text image (html canvas) and hidden form input field with md5 hash value. 
+Generates random text image (html canvas) and hidden form input field with md5 encrypted value. 
 See ./demo/demo.html
 
 See /src/captcha.js for available parameters.
