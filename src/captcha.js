@@ -11,11 +11,12 @@ module.exports =  class agiCaptcha {
       backgroundColor: '#000000',
       color: '#e8e8e8',
       width: 'auto',
-      id: 'agi-captcha-canvas',
+      canvasID: 'agi-captcha-canvas',
       hiddenId: 'agi-captcha-hidden',
       parentDivId: 'cp',
       hiddenInputName: 'password-captcha',
-      font: '32px Arial'
+      font: '32px Arial',
+      textPosition: [10, 35]
     }
 
   }
@@ -33,7 +34,7 @@ module.exports =  class agiCaptcha {
     }
     const cHeight = Math.round(cWidth / 10);
     const canvasElement = document.createElement('canvas');
-    canvasElement.setAttribute('id', this.params.id);
+    canvasElement.setAttribute('id', this.params.canvasID);
     canvasElement.setAttribute('width', cWidth);
     canvasElement.setAttribute('height', cHeight);
     canvasElement.style.backgroundColor = this.params.backgroundColor;
@@ -41,7 +42,7 @@ module.exports =  class agiCaptcha {
     const text = md5(Math.random()).substr(0,6);
     ctx.font = this.params.font;
     ctx.fillStyle = this.params.color;
-    ctx.fillText(text, 10,30);
+    ctx.fillText(text, this.params.textPosition[0],this.params.textPosition[1], cWidth - this.params.textPosition[0]);
 
     const hiddenElement = document.createElement('input');
     hiddenElement.setAttribute('id', this.params.hiddenId )
@@ -51,8 +52,8 @@ module.exports =  class agiCaptcha {
 
     try {
 
-      if(document.getElementById( this.params.id )) {
-        document.getElementById( this.params.id ).replaceWith( canvasElement );
+      if(document.getElementById( this.params.canvasID )) {
+        document.getElementById( this.params.canvasID ).replaceWith( canvasElement );
       } else {
         document.getElementById( this.params.parentDivId ).appendChild( canvasElement );
       }

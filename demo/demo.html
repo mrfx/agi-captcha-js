@@ -15,19 +15,14 @@
     </fieldset>
   </form>
 
-  <script src="./../dist/captcha.js"></script>
+  <script src="./../dist/captcha.js?uji"></script>
   <script>
 
     window.onload = function () {
       const c = new agiCaptcha();
       c.params.color = '#33ff88';
+      c.params.textPosition = [20, 35];
       c.createCanvas();
-
-      setTimeout( ()=> {
-        c.params.color = '#ff8080';
-        c.createCanvas();
-      }, 2000);
-
     };
 
 
