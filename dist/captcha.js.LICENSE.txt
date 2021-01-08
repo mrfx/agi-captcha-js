@@ -4,3 +4,11 @@
  * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */
+
+/*!
+ * agi-captcha.js
+ *
+ * @author: Grzegorz Wojak <https://www.aginternet.pl>
+ * @license MIT
+ *
+ */

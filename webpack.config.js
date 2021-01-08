@@ -1,3 +1,5 @@
+const webpack = require ( "webpack" );
+const fs = require ( "fs" );
 const path = require('path');
 
 
@@ -9,5 +11,9 @@ module.exports = {
     library: 'agiCaptcha',
     libraryTarget: "umd"
   },
+  plugins: [
+    new webpack.BannerPlugin({ banner: fs.readFileSync('./license.txt', { encoding: 'utf8' }) })
+    ]
+
 
 };

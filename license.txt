@@ -1,3 +1,4 @@
-agi-captcha author: Grzegorz Wojak
-https://www.aginternet.pl
+agi-captcha.js
+
+@author: Grzegorz Wojak <https://www.aginternet.pl>
 @license MIT
