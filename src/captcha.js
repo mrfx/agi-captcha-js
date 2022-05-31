@@ -14,7 +14,7 @@ module.exports =  class agiCaptcha {
       width: 'auto',
       canvasID: 'agi-captcha-canvas',
       hiddenId: 'agi-captcha-hidden',
-      hiddenInputName: 'password-captcha',
+      hiddenInputName: 'agi-captcha-hidden',
       font: '32px Arial',
       textPosition: [10, 35],
       parentDivId: 'cp'
